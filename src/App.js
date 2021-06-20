@@ -4,19 +4,31 @@ const url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findBy
 
 function App() {
   const [query, setQuery] = useState('');
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(null);
 
   const search = evt => {
-    if (evt.key === "Enter") {
-      fetch(url+`?pincode=${query}&date=18-06-2021`)
+    console.log(query)
+    if ( evt.key === "Enter") {
+      if(query)
+      {
+        const date = new Date();
+      const today = `${date.getDate()}-${(date.getMonth()+1).toString().padStart(2,0)}-${date.getUTCFullYear()}`
+      //console.log(today);
+      fetch(url+`?pincode=${query}&date=${today}`)
         .then(res => res.json())
         .then(result => {
-          setItems(result.sessions);
+          //setItems(result.sessions.filter(a=>a.available_capacity_dose1!==0 || a.available_capacity_dose2!==0));
+          setItems(result.sessions)
           setQuery('');
           //console.log(result.sessions);
           //console.log("Item is = " + JSON.stringify(items));  
         });
-    }
+      }
+      else 
+      setItems([])
+    }   
+      
+    
   }
 
 
@@ -33,7 +45,7 @@ function App() {
             onKeyPress={search}
           />
         </div>
-        {items.length ? (
+        { !items ? <></> : items.length ? (
         <div>
           {console.log(items)}
                    <ul>
