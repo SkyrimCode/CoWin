@@ -11,6 +11,7 @@ function App() {
     if ( evt.key === "Enter") {
       if(query)
       {
+        let res=[]
         const date = new Date();
       const today = `${date.getDate()}-${(date.getMonth()+1).toString().padStart(2,0)}-${date.getUTCFullYear()}`
       //console.log(today);
@@ -18,7 +19,8 @@ function App() {
         .then(res => res.json())
         .then(result => {
           //setItems(result.sessions.filter(a=>a.available_capacity_dose1!==0 || a.available_capacity_dose2!==0));
-          setItems(result.sessions)
+          res = result.sessions?result.sessions.filter(item => item.available_capacity>0):[];
+          setItems(res)
           setQuery('');
           //console.log(result.sessions);
           //console.log("Item is = " + JSON.stringify(items));  
@@ -53,11 +55,12 @@ function App() {
                             <li key={item.session_id}>
                                 <strong>Name: </strong>{item.name}
                                 <strong className='mLeft'>Address: </strong> {item.address} 
+                                <strong className='mLeft'>Available Slots: </strong>{item.available_capacity}
                             </li>
                         ))}
                     </ul>
         </div>
-        ) : (<div>Nothing to display</div>)}
+        ) : (<div>Sorry! No slots available...</div>)}
       </main>
     </div>
   );
