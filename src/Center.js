@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 const Container = styled.div`
   margin-bottom: 8px;
@@ -7,18 +7,16 @@ const Container = styled.div`
   padding: 8px;
   `;
 
-export class Center extends Component {
-    render() {
-        return (
+function Center(props) {
+   return (
             <Container>
-                <h3>{this.props.item.name}</h3>
-                {this.props.item.address}<br/>
-                Price: &#8377;{this.props.item.fee}<br/>
-                Vaccine: {this.props.item.vaccine}<br/>
-                Available Slots: {this.props.item.available_capacity}
+                <h3>{props.item.name}</h3>
+                {props.item.address}<br/>
+                Price: &#8377;{props.item.fee}<br/>
+                Vaccine: {props.item.vaccine}<br/>
+                Available Slots: {props.item.available_capacity}
             </Container>
         )
-    }
 }
 
 export default Center

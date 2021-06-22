@@ -51,3 +51,10 @@ main {
 .mLeft{
   margin-left: 1.5rem;
 }
+.datepicker{
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+
+}
