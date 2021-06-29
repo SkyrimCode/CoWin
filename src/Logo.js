@@ -4,6 +4,7 @@ export default function Logo() {
     return (
         <div>
             COWIN
+            
         </div>
     )
 }

@@ -4,10 +4,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import FetchCenters from './FetchCenters';
+import { AiOutlineHome } from 'react-icons/ai';
+import { GiLoveInjection } from 'react-icons/gi';
 
 const url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin"
 
-export default function SearchByPIN() {
+export default function SearchByPIN(props) {
     const [query, setQuery] = useState('');
     const [items, setItems] = useState(null);
     const [selectedDate,setSelectedDate] = useState(null)
@@ -56,7 +58,11 @@ export default function SearchByPIN() {
                 scrollableMonthYearDropdown/>
                 </div>
 
-                <div className='btn'><Button color="outline-primary" onClick={search}>Check Availability</Button>{' '}</div>
+                <div className='btn '>
+                    <Button color="outline-primary" onClick={search}><GiLoveInjection style={{marginBottom: '4px'}}/> Check Availability</Button>{' '}
+                    <Button color="outline-primary" onClick={() => props.onChange('0')}><AiOutlineHome style={{marginBottom: '4px'}}/> Back To Home</Button>{' '}
+                </div>
+                
                 <FetchCenters items={items}/>
             </main>
         </div>
