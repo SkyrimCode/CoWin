@@ -10,18 +10,18 @@ import { GiLoveInjection } from 'react-icons/gi';
 const url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin"
 
 export default function SearchByPIN(props) {
-    const [query, setQuery] = useState('');
+    const [pin, setPin] = useState('');
     const [items, setItems] = useState(null);
     const [selectedDate,setSelectedDate] = useState(null)
 
     const search = () => {
-        // console.log(query)
-        if(query)
+        // console.log(pin)
+        if(pin)
         {
             const date = selectedDate;
             const today = `${date.getDate()}-${(date.getMonth()+1).toString().padStart(2,0)}-${date.getUTCFullYear()}`
 
-            fetch(url+`?pincode=${query}&date=${today}`)
+            fetch(url+`?pincode=${pin}&date=${today}`)
             .then(res => res.json())
             .then(result => {
             let res = result.sessions?result.sessions.filter(item => item.available_capacity>0):[];
@@ -41,8 +41,8 @@ export default function SearchByPIN(props) {
                     type="text"
                     className="search-bar"
                     placeholder="Enter PIN Code..."
-                    onChange={e => setQuery(e.target.value)}
-                    value={query}
+                    onChange={e => setPin(e.target.value)}
+                    value={pin}
                 />
                 </div>
 
