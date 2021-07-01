@@ -18,8 +18,8 @@ body {
 
   font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
 	font-weight: normal;
-  font-size: 2em;
-	letter-spacing: .2em;
+  font-size: 2.3em;
+	letter-spacing: .3em;
 	line-height: 1.1em;
 	margin-top: 20px;
   margin-bottom: 30px;
@@ -84,6 +84,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   border:none;
+  letter-spacing: 1px;
 }
 .App {
   height: 80vh;
@@ -105,4 +106,9 @@ body {
 .container{
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.error{
+  color: red;
+  font-size: 16px;
 }

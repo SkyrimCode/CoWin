@@ -3,6 +3,8 @@ import SearchByPIN from './SearchByPIN';
 import Logo from './Logo';
 import SearchByDistrict from './SearchByDistrict';
 import {Button} from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+
 function App() {
   const [option,setOption] = useState('0');
   const handleClick = (val)=> {
