@@ -14,10 +14,12 @@ function App() {
   return (
     <div>
       <div className='logo'><Logo/></div>
-      <div>
-        {option==='0'?<Button onClick={() => handleClick('1')}>Search By PIN</Button>:<></>}
-        {option==='0'?<Button onClick={() => handleClick('2')}>Search By District</Button>:<></>}
-      </div>
+      {option==='0'?
+            <div className='center'>
+                <Button color='outline-secondary' onClick={() => handleClick('1')}>Search By PIN</Button>
+                <Button color='outline-secondary' style={{marginTop:'20px'}} onClick={() => handleClick('2')}>Search By District</Button>
+            </div>
+        :<></>}
         {option==='1'?<SearchByPIN onChange={(val) => setOption(val)}/>:<></>}
         {option==='2'?<SearchByDistrict onChange={(val) => setOption(val)}/>:<></>}
     </div>

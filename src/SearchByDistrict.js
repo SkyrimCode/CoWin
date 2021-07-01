@@ -1,8 +1,6 @@
 import React,{useState} from 'react';
 import FetchCenters from './FetchCenters';
 import DatePicker from 'react-datepicker';
-import { Button } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.css';
 import { GiLoveInjection } from 'react-icons/gi';
 import { AiOutlineHome } from 'react-icons/ai';
 
@@ -29,7 +27,8 @@ export default function SearchByDistrict(props) {
         //console.log(event.target.value)
     }
 
-    const retrieve = () => {
+    const retrieve = (e) => {
+        e.preventDefault();
         if(districtId)
         {
             const date = selectedDate;
@@ -48,41 +47,46 @@ export default function SearchByDistrict(props) {
     return (
         
         <div>
-            <div style={{textAlign:'center'}}>
-            <label>
-            <div className='impText'>Choose State: </div>
-                <select onChange={handleChange}>
-                    {
-                        states.map(state=>  <option key={state.state_id} value={state.state_id}>{state.state_name}</option>)
-                    }
-                </select>
-            </label>
-            <label style={{marginLeft:'30px'}}>
-            <div className='impText'>Choose District: </div>
-                <select onChange={handleDistrictChoice}>
-                    {
-                        districts.map(district=> <option key={district.district_id} value={district.district_id}>{district.district_name}</option>)
-                    }
-                </select>
-            </label>
+            <div className="App">
+                <form onSubmit={retrieve}>
+                <div className='container'>
+                    <div><label>Choose State: </label></div>
+                    <select className='input' onChange={handleChange}>
+                        {
+                            states.map(state=>  <option key={state.state_id} value={state.state_id}>{state.state_name}</option>)
+                        }
+                    </select>
+                </div>
+                <div className='container'>
+                <div><label>Choose District: </label></div>
+                    <select className='input' onChange={handleDistrictChoice}>
+                        {
+                            districts.map(district=> <option key={district.district_id} value={district.district_id}>{district.district_name}</option>)
+                        }
+                    </select>
+                </div>
             
-            <div className='datepicker'>
-                <div className='impText'>Date:{' '}</div>
-                <DatePicker placeholderText="Enter date..." 
-                selected={selectedDate} 
-                onChange={date => setSelectedDate(date)} 
-                dateFormat='dd/MM/yyyy' 
-                minDate={new Date()} 
-                isClearable 
-                showYearDropdown 
-                scrollableMonthYearDropdown/>
-            </div>
-            </div>
-            <div className='btn'>
-                <Button color="outline-primary" onClick={retrieve}><GiLoveInjection style={{marginBottom: '4px'}}/> Check Availability</Button>{' '}
-                <Button color="outline-primary" onClick={() => props.onChange('0')}><AiOutlineHome style={{marginBottom: '4px'}}/> Back To Home</Button>{' '}
-            </div>
+                <div className='container'>
+                    <div><label>Date:</label></div>
+                    <DatePicker 
+                    className='input'
+                    placeholderText="Enter date..." 
+                    selected={selectedDate} 
+                    popperPlacement='right'
+                    onChange={date => setSelectedDate(date)} 
+                    dateFormat='dd/MM/yyyy' 
+                    minDate={new Date()} 
+                    isClearable 
+                    showYearDropdown 
+                    scrollableMonthYearDropdown/>
+                </div>
             
+                <div style={{marginLeft:'10px'}}>
+                    <div><button type='submit' className='btnnn'><GiLoveInjection style={{marginBottom: '4px'}}/> Find Slots</button></div>
+                    <div><button className='btnnn' onClick={() => props.onChange('0')}><AiOutlineHome style={{marginBottom: '4px'}}/> Home</button></div>
+                </div>
+                </form>
+            </div>
             <FetchCenters items={items}/>
         </div>
     )

@@ -3,36 +3,6 @@ body {
   font-family: 'montseratt', sans-serif;
 }
 
-main {
-  padding: 25px;
-}
-
-.search-box {
-  margin-bottom: 30px;
-}
-
-.search-box .search-bar {
-  display: block;
-  width: 100%;
-  padding: 15px;
-
-  appearance: none;
-  background: none;
-  border: solid lightgrey;
-  outline: none;
-
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px 10px 10px 10px;
-}
-
-.search-box .search-bar:focus {
-  background-color: rgba(255, 255, 255, 0.75);
-}
-
-.datepicker{
-  width: 100%;
-}
-
 .btn{
   width:50%;
   margin-left:25%;
@@ -57,6 +27,16 @@ main {
 
 }
 
+.center{
+  padding: 15px;
+  position: absolute;
+  width: 50%;
+  top: 45%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
 /* .btnn{
   text-decoration: none;
   padding: 20px 50px;
@@ -96,3 +76,33 @@ main {
 .btn1:hover::before{
   transform: translate(12px, 12px)
 } */
+
+.btnnn{
+  margin-top: 1rem;
+  padding: 10px 40px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  border:none;
+}
+.App {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input{
+  padding: 10px;
+  width:300px;
+  max-width: 90%;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.container{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

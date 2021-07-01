@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
@@ -14,11 +13,12 @@ export default function SearchByPIN(props) {
     const [items, setItems] = useState(null);
     const [selectedDate,setSelectedDate] = useState(null)
 
-    const search = () => {
-        // console.log(pin)
+    const search = (e) => {
+        e.preventDefault();
         if(pin)
         {
             const date = selectedDate;
+            console.log(date)
             const today = `${date.getDate()}-${(date.getMonth()+1).toString().padStart(2,0)}-${date.getUTCFullYear()}`
 
             fetch(url+`?pincode=${pin}&date=${today}`)
@@ -34,37 +34,46 @@ export default function SearchByPIN(props) {
 
     return (
         <div>
-            <main>
-                <div className="search-box">
-                <div className='impText'>Pincode:{' '}</div>
+        <div className='App'>
+            <form onSubmit={search}>
+                <div>
+                <p><label>Pincode:</label></p>
                 <input 
-                    type="text"
-                    className="search-bar"
+                    className='input'
+                    type="number"
+                    name="PIN"
                     placeholder="Enter PIN Code..."
                     onChange={e => setPin(e.target.value)}
                     value={pin}
                 />
                 </div>
 
-                <div className='datepicker'>
-                <div className='impText'>Date:{' '}</div>
-                <DatePicker placeholderText="Enter date..." 
+                <div>
+                <p><label>Date:</label></p>
+                
+                <DatePicker 
+                placeholderText="Enter date..." 
+                className='input'
                 selected={selectedDate} 
                 onChange={date => setSelectedDate(date)} 
                 dateFormat='dd/MM/yyyy' 
+                popperPlacement='right'
                 minDate={new Date()} 
                 isClearable 
                 showYearDropdown 
                 scrollableMonthYearDropdown/>
+                
                 </div>
 
-                <div className='btn '>
-                    <Button color="outline-primary" onClick={search}><GiLoveInjection style={{marginBottom: '4px'}}/> Check Availability</Button>{' '}
-                    <Button color="outline-primary" onClick={() => props.onChange('0')}><AiOutlineHome style={{marginBottom: '4px'}}/> Back To Home</Button>{' '}
+                <div>
+                    <div><button type='submit' className='btnnn'><GiLoveInjection style={{marginBottom: '4px'}}/> Find Slots</button></div>
+                    <div><button className='btnnn' onClick={() => props.onChange('0')}><AiOutlineHome style={{marginBottom: '4px'}}/> Home</button>{' '}</div>
                 </div>
                 
-                <FetchCenters items={items}/>
-            </main>
+                
+            </form>
+            </div>
+            <FetchCenters items={items}/>
         </div>
     )
 }
