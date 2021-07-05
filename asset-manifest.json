@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/CoWin/static/css/main.287db529.chunk.css",
+    "main.js": "/CoWin/static/js/main.2161cd99.chunk.js",
+    "main.js.map": "/CoWin/static/js/main.2161cd99.chunk.js.map",
+    "runtime-main.js": "/CoWin/static/js/runtime-main.b7a6bbd3.js",
+    "runtime-main.js.map": "/CoWin/static/js/runtime-main.b7a6bbd3.js.map",
+    "static/css/2.ec6a6ed2.chunk.css": "/CoWin/static/css/2.ec6a6ed2.chunk.css",
+    "static/js/2.1117bc1a.chunk.js": "/CoWin/static/js/2.1117bc1a.chunk.js",
+    "static/js/2.1117bc1a.chunk.js.map": "/CoWin/static/js/2.1117bc1a.chunk.js.map",
+    "static/js/3.f0057a4a.chunk.js": "/CoWin/static/js/3.f0057a4a.chunk.js",
+    "static/js/3.f0057a4a.chunk.js.map": "/CoWin/static/js/3.f0057a4a.chunk.js.map",
+    "index.html": "/CoWin/index.html",
+    "static/css/2.ec6a6ed2.chunk.css.map": "/CoWin/static/css/2.ec6a6ed2.chunk.css.map",
+    "static/css/main.287db529.chunk.css.map": "/CoWin/static/css/main.287db529.chunk.css.map",
+    "static/js/2.1117bc1a.chunk.js.LICENSE.txt": "/CoWin/static/js/2.1117bc1a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b7a6bbd3.js",
+    "static/css/2.ec6a6ed2.chunk.css",
+    "static/js/2.1117bc1a.chunk.js",
+    "static/css/main.287db529.chunk.css",
+    "static/js/main.2161cd99.chunk.js"
+  ]
+}
