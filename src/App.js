@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import SearchByPIN from './SearchByPIN';
 import Logo from './Logo';
 import SearchByDistrict from './SearchByDistrict';
-import {Button} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
@@ -18,11 +17,11 @@ function App() {
       <div className='logo'><Logo/></div>
       {option==='0'?
             <div className='center'>
-              <div className='button-container-1'>
-                <span class="mas">Search By PIN</span><button onClick={() => handleClick('1')}>Search By PIN</button>
+              <div style={{textAlign:'center'}}>
+                <button className='button btn1' onClick={() => handleClick('1')}><span>Search By PIN</span></button>
               </div>
-              <div className='button-container-1'>
-                <span class="mas">Search By District</span><button onClick={() => handleClick('2')}>Search By District</button>
+              <div style={{textAlign:'center'}}>
+                <button className='button btn1' onClick={() => handleClick('2')}><span>Search By District</span></button>
                 </div>
             </div>
         :<></>}

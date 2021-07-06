@@ -1,14 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
 import Center from './Center';
-const Container = styled.div`
-  margin: 8px;
-  border: 1px solid lightgrey;
-  border-radius: 2px;
-  `;
-const CenterList = styled.div`
-  padding: 8px;
-  `;
 
 function FetchCenters(props) {
     return (
