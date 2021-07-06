@@ -12,13 +12,13 @@ const CenterList = styled.div`
 
 function FetchCenters(props) {
     return (
-        <div>
+        <div className="centerBody">
        { !props.items ? <></> : props.items.length ? (
-        <Container>
-            <CenterList>
+        
+            <ul>
                 {props.items.map(item => (<Center key={item.session_id} item={item}/>))}
-            </CenterList>
-        </Container>
+            </ul>
+        
             ) : (<h3>Sorry! No slots available...</h3>)}
         </div>
     )

@@ -9,13 +9,13 @@ const Container = styled.div`
 
 function Center(props) {
    return (
-            <Container>
-                <h3>{props.item.name}</h3>
-                {props.item.address}<br/>
-                Price: &#8377;{props.item.fee}<br/>
-                Vaccine: {props.item.vaccine}<br/>
-                Available Slots: {props.item.available_capacity}
-            </Container>
+            <li>
+                <div className='impFont'>{props.item.name}</div>
+                <div>{props.item.address}</div>
+                <div>Price: &#8377;{props.item.fee}</div>
+                <div>Vaccine: {props.item.vaccine}</div>
+                <div>Available Slots: {props.item.available_capacity}</div>
+            </li>
         )
 }
 

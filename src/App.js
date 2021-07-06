@@ -18,8 +18,12 @@ function App() {
       <div className='logo'><Logo/></div>
       {option==='0'?
             <div className='center'>
-                <Button color='outline-secondary' onClick={() => handleClick('1')}>Search By PIN</Button>
-                <Button color='outline-secondary' style={{marginTop:'20px'}} onClick={() => handleClick('2')}>Search By District</Button>
+              <div className='button-container-1'>
+                <span class="mas">Search By PIN</span><button onClick={() => handleClick('1')}>Search By PIN</button>
+              </div>
+              <div className='button-container-1'>
+                <span class="mas">Search By District</span><button onClick={() => handleClick('2')}>Search By District</button>
+                </div>
             </div>
         :<></>}
         {option==='1'?<SearchByPIN onChange={(val) => setOption(val)}/>:<></>}

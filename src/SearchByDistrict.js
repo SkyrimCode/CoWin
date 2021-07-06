@@ -89,7 +89,7 @@ export default function SearchByDistrict(props) {
                     className='input'
                     placeholderText="Enter date..." 
                     selected={selectedDate} 
-                    popperPlacement='right'
+                    withPortal
                     onChange={date => handleDateChange(date)} 
                     dateFormat='dd/MM/yyyy' 
                     minDate={new Date()} 
@@ -100,8 +100,8 @@ export default function SearchByDistrict(props) {
                 </div>
                         
                 <div style={{marginLeft:'10px'}}>
-                    <div><button type='submit' className='btnnn'><GiLoveInjection style={{marginBottom: '4px'}}/> Find Slots</button></div>
-                    <div><button className='btnnn' onClick={() => props.onChange('0')}><AiOutlineHome style={{marginBottom: '4px'}}/> Home</button></div>
+                    <div><button type='submit' className='button btn2'><span><GiLoveInjection style={{marginBottom: '4px'}}/> Find Slots</span></button></div>
+                    <div><button className='button btn2' onClick={() => props.onChange('0')}><span><AiOutlineHome style={{marginBottom: '4px'}}/> Home</span></button></div>
                 </div>
                 </form>
             </div>

@@ -1,7 +1,4 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap'); */
-body {
-  font-family: 'montseratt', sans-serif;
-}
 
 .btn{
   width:50%;
@@ -9,7 +6,10 @@ body {
   margin-right:25%;
   margin-top: 20px;
 }
-
+.btn:hover{
+  background: black;
+  color: white;
+}
 .impText{
   font-size: 100%;
   font-weight: 500;
@@ -26,7 +26,7 @@ body {
 	text-align: center;
 
 }
-
+@media(min-width: 600px){
 .center{
   padding: 15px;
   position: absolute;
@@ -37,55 +37,23 @@ body {
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 }
-/* .btnn{
-  text-decoration: none;
-  padding: 20px 50px;
-  font-size: 1.25rem;
-  position: relative;
-  margin: 32px;
-  font-family: 'Arvo', serif;
 }
-
-.btn1{
-  background: #000;
-  color: #fff;
-  border-radius: 30px;
-  transition: transform 0.3s ease;
-}
-
-.btn1::after, .btn1::before{
-  content: "";
+@media(max-width: 600px){
+.center
+{
+  padding: 15px;
   position: absolute;
-  opacity: 0.3;
-  background: #000;
-  border-radius: inherit;
   width: 100%;
-  height: 100%;
-  left:0;
-  bottom:0;
-  z-index: -1;
-  transition: transform 0.3s ease;
+  top: 45%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
 }
 
-.btn1:hover{
-  transform: translate(-12px, -12px)
-}
-.btn1:hover::after{
-  transform: translate(6px, 6px)
-}
-.btn1:hover::before{
-  transform: translate(12px, 12px)
-} */
 
-.btnnn{
-  margin-top: 1rem;
-  padding: 10px 40px;
-  background: #000;
-  color: #fff;
-  text-transform: uppercase;
-  border:none;
-  letter-spacing: 1px;
-}
+
 .App {
   height: 80vh;
   width: 100%;
@@ -111,4 +79,184 @@ body {
 .error{
   color: red;
   font-size: 16px;
+}
+
+.centerBody{
+  margin:10px;
+  padding:0;
+  background: #88bdbc;
+  font-family: sans-serif;
+}
+
+ul{
+  position: relative;
+  width:100%;
+  margin: 100px auto 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+ul li{
+  display: block;
+  background: rgba(255,255,255,.1);
+  padding: 10px 20px;
+  color: #000;
+  margin: 10px;
+  margin-left: -10px;
+  transition: .5s; 
+
+}
+
+ul li:nth-child(1){
+  background: rgba(255,255,255,.6);
+}
+ul li:nth-child(2){
+  background: rgba(255,255,255,.4);
+}
+ul li:nth-child(3){
+  background: rgba(255,255,255,.2);
+}
+ul li:hover{
+  transform: scale(1.03);
+  background:rgba(255,255,255,.6)
+}
+
+.button {
+  display: inline-block;
+  /* margin: 0 10px 20px; */
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+  padding: 8px 25px;
+  background: black;
+  letter-spacing: 1px;
+  border: none;
+}
+.button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #fff;
+}
+.button span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn2 {
+  transition: all 0.4s;
+}
+.btn2:before {
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 0;
+  transform: translate3d(-50%, -50%, 0) rotate(45deg);
+  transition: all 0.45s;
+}
+.btn2:hover {
+  color: black;
+}
+.btn2:hover:before {
+  height: 400%;
+}
+.impFont{
+  font-size: 150%;
+  font-weight:500;
+}
+
+.button-container-1 {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6vh;
+  overflow: hidden;
+  /* border: 1px solid; */
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  transition: 0.5s;
+  letter-spacing: 1px;
+    
+}
+.button-container-1 button {
+  width: 101%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background: #000;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+}
+.button-container-1 button:hover {
+  -webkit-animation: ani 0.7s steps(22) forwards;
+  animation: ani 0.7s steps(22) forwards;
+}
+.mas {
+  position: absolute;
+  color: #000;
+  text-align: center;
+  width: 101%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  position: absolute;
+  font-size: 11px;
+  margin-top: 17px;
+  overflow: hidden;
+  font-weight: bold;
+}
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+ }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+ }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+ }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+ }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+ }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+ }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+ }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+ }
 }
