@@ -25,6 +25,9 @@
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
   }
+  .btn1{
+    width:50%;
+  }
   }
 
 @media(max-width: 600px){
@@ -38,6 +41,9 @@
   -ms-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+}
+.btn1{
+  width:70%;
 }
 }
 
@@ -110,13 +116,13 @@ ul li:hover{
 
 .button {
   display: inline-block;
-  margin: 0 10px 20px;
+  margin-bottom: 10px;
+  margin-top:10px;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  margin-top: 1rem;
   padding: 8px 25px;
   background: black;
   letter-spacing: 1px;
@@ -134,6 +140,7 @@ ul li:hover{
 }
 .btn1 {
   transition: background 0.15s, color 0.25s;
+  margin-top: 1rem;
 }
 .btn1:before {
   top: 0;
