@@ -18,10 +18,10 @@ function App() {
       {option==='0'?
             <div className='center'>
               <div style={{textAlign:'center'}}>
-                <button className='button btn1' onClick={() => handleClick('1')}><span>Search By PIN</span></button>
+                <button className='button1 btn1' onClick={() => handleClick('1')}><span>Search By PIN</span></button>
               </div>
               <div style={{textAlign:'center'}}>
-                <button className='button btn1' onClick={() => handleClick('2')}><span>Search By District</span></button>
+                <button className='button1 btn1' onClick={() => handleClick('2')}><span>Search By District</span></button>
                 </div>
             </div>
         :<></>}

@@ -3,14 +3,14 @@ import Center from './Center';
 
 function FetchCenters(props) {
     return (
-        <div className="centerBody">
+        <div>
        { !props.items ? <></> : props.items.length ? (
-        
+        <div className="centerBody">
             <ul>
                 {props.items.map(item => (<Center key={item.session_id} item={item}/>))}
             </ul>
-        
-            ) : (<h3>Sorry! No slots available...</h3>)}
+        </div>
+            ) : (<h3 className='centerError'>Sorry! No slots available.</h3>)}
         </div>
     )
 }
