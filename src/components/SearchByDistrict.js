@@ -5,7 +5,7 @@ import { GiLoveInjection } from 'react-icons/gi';
 import { AiOutlineHome } from 'react-icons/ai';
 
 export default function SearchByDistrict(props) {
-    const states=require('./assets/states.json');
+    const states=require('../assets/states.json');
     const url1='https://cdn-api.co-vin.in/api/v2/admin/location/districts/';
     const url2='https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict';
 

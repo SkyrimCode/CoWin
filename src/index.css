@@ -148,10 +148,9 @@ ul li:hover{
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  padding: 8px 25px;
+  padding: 8px 20px;
   background: white;
-  letter-spacing: 1px;
-  border-radius: 10px;
+  letter-spacing: 2px;
   
 }
 .button1:before {
