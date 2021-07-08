@@ -1,3 +1,11 @@
+App Name: CoWin
+
+Libraries: React
+
+Purpose: Fetches the COVID-19 slot availability data from CO-WIN public APIs and renders to UI.
+
+Hosted On: https://skyrimcode.github.io/CoWin/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
