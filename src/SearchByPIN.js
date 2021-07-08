@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
@@ -15,7 +15,9 @@ export default function SearchByPIN(props) {
     const [pinerror,setPinError] = useState('')
     const [invalidPin,setInvalidPin] = useState('')
     const [dateError,setDateError] = useState('')
-
+    const focusRef = useRef()
+  
+    
     const handlePINChange = e => {
         let p = e.target.value;
         if(p)
@@ -55,6 +57,7 @@ export default function SearchByPIN(props) {
                 let res = result.sessions?result.sessions.filter(item => item.available_capacity>0):[];
                 setItems(res) 
             }
+            focusRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
             });
         }
         if(!pin){
@@ -62,7 +65,7 @@ export default function SearchByPIN(props) {
         }
         if(!selectedDate)
             setDateError('Date is not selected')
-
+        
     }
 
     return (
@@ -102,14 +105,15 @@ export default function SearchByPIN(props) {
                 <p className='error'>{dateError}</p>
 
                 <div>
-                    <div><button type='submit' className='button btn2'><span><GiLoveInjection style={{marginBottom: '4px'}}/> Find Slots</span></button></div>
+                    <div><button type='submit' className='button btn2' ><span><GiLoveInjection style={{marginBottom: '4px'}}/> Find Slots</span></button></div>
                     <div><button className='button btn2' onClick={() => props.onChange('0')}><span><AiOutlineHome style={{marginBottom: '4px'}}/> Home</span></button>{' '}</div>
                 </div>
                 
                 
             </form>
             </div>
-            <FetchCenters items={items}/>
+            
+            <div ref={focusRef}><FetchCenters items={items}/></div>
         </div>
     )
 }

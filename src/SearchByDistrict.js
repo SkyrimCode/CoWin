@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useRef} from 'react';
 import FetchCenters from './FetchCenters';
 import DatePicker from 'react-datepicker';
 import { GiLoveInjection } from 'react-icons/gi';
@@ -17,6 +17,7 @@ export default function SearchByDistrict(props) {
     const [stateError,setStateError] = useState('')
     const [districtError,setDistrictError] = useState('')
     const [dateError,setDateError] = useState('')
+    const focusRef = useRef()
 
     const handleStateChange = (event) => {
         setState(event.target.value)
@@ -49,6 +50,7 @@ export default function SearchByDistrict(props) {
                 .then(result => {
                     let res = result.sessions?result.sessions.filter(item => item.available_capacity>0):[];
                     setItems(res);
+                    focusRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
                 });
         }
         if(!state)
@@ -105,7 +107,7 @@ export default function SearchByDistrict(props) {
                 </div>
                 </form>
             </div>
-            <FetchCenters items={items}/>
+            <div ref={focusRef}><FetchCenters items={items}/></div>
         </div>
     )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
 import Center from './Center';
 
+
 function FetchCenters(props) {
     return (
-        <div>
+        <div id='centerid'>
        { !props.items ? <></> : props.items.length ? (
         <div className="centerBody">
             <ul>
