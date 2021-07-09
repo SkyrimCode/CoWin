@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/CoWin/static/css/main.8860590b.chunk.css",
-    "main.js": "/CoWin/static/js/main.9df7adfd.chunk.js",
-    "main.js.map": "/CoWin/static/js/main.9df7adfd.chunk.js.map",
+    "main.css": "/CoWin/static/css/main.759db719.chunk.css",
+    "main.js": "/CoWin/static/js/main.78e12b3b.chunk.js",
+    "main.js.map": "/CoWin/static/js/main.78e12b3b.chunk.js.map",
     "runtime-main.js": "/CoWin/static/js/runtime-main.27d29f04.js",
     "runtime-main.js.map": "/CoWin/static/js/runtime-main.27d29f04.js.map",
     "static/css/2.ec6a6ed2.chunk.css": "/CoWin/static/css/2.ec6a6ed2.chunk.css",
-    "static/js/2.d4d0d0db.chunk.js": "/CoWin/static/js/2.d4d0d0db.chunk.js",
-    "static/js/2.d4d0d0db.chunk.js.map": "/CoWin/static/js/2.d4d0d0db.chunk.js.map",
+    "static/js/2.69cd1d2c.chunk.js": "/CoWin/static/js/2.69cd1d2c.chunk.js",
+    "static/js/2.69cd1d2c.chunk.js.map": "/CoWin/static/js/2.69cd1d2c.chunk.js.map",
     "index.html": "/CoWin/index.html",
     "static/css/2.ec6a6ed2.chunk.css.map": "/CoWin/static/css/2.ec6a6ed2.chunk.css.map",
-    "static/css/main.8860590b.chunk.css.map": "/CoWin/static/css/main.8860590b.chunk.css.map",
-    "static/js/2.d4d0d0db.chunk.js.LICENSE.txt": "/CoWin/static/js/2.d4d0d0db.chunk.js.LICENSE.txt"
+    "static/css/main.759db719.chunk.css.map": "/CoWin/static/css/main.759db719.chunk.css.map",
+    "static/js/2.69cd1d2c.chunk.js.LICENSE.txt": "/CoWin/static/js/2.69cd1d2c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.27d29f04.js",
     "static/css/2.ec6a6ed2.chunk.css",
-    "static/js/2.d4d0d0db.chunk.js",
-    "static/css/main.8860590b.chunk.css",
-    "static/js/main.9df7adfd.chunk.js"
+    "static/js/2.69cd1d2c.chunk.js",
+    "static/css/main.759db719.chunk.css",
+    "static/js/main.78e12b3b.chunk.js"
   ]
 }
