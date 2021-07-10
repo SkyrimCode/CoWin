@@ -17,13 +17,14 @@ function App() {
       <div className='logo'><Logo/></div>
       {option==='0'?
             <div className='center'>
-              <div style={{textAlign:'center'}}>
+              <div>
                 <button className='button1 btn1' onClick={() => handleClick('1')}><span>Search By PIN</span></button>
               </div>
-              <div style={{textAlign:'center'}}>
+              <div>
                 <button className='button1 btn1' onClick={() => handleClick('2')}><span>Search By District</span></button>
                 </div>
             </div>
+            
         :<></>}
         {option==='1'?<SearchByPIN onChange={(val) => setOption(val)}/>:<></>}
         {option==='2'?<SearchByDistrict onChange={(val) => setOption(val)}/>:<></>}
